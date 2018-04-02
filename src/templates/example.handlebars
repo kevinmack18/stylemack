@@ -70,20 +70,20 @@
 				{{{content}}}
 			{{/if~}}
 			{{~#if (compare language "==" "angularjs")}}
-				<main ng-controller="stylemark-{{doc.slug}}-{{example.name}}"></main>
+				<main ng-controller="stylemack-{{doc.slug}}-{{example.name}}"></main>
 			{{/if~}}
 			{{~#if (compare language "==" "jsx")}}
-				<main class="stylemark-react-root"></main>
+				<main class="stylemack-react-root"></main>
 			{{/if~}}
 			{{~#if (or (compare language "==" "handlebars") (compare language "==" "hbs"))}}
-				<main class="stylemark-ember-root"></main>
+				<main class="stylemack-ember-root"></main>
 			{{/if~}}
 		{{/each~}}
 
 		{{{options.bodyHtml}}}
 
 		{{#each example.blocks}}
-			<script type="text/x-stylemark" data-language="{{language}}">{{{content}}}</script>
+			<script type="text/x-stylemack" data-language="{{language}}">{{{content}}}</script>
 		{{/each}}
 
 		<!--
@@ -117,10 +117,10 @@
 					}
 					else {
 						// Creates a new module
-						module = angular.module('stylemark-{{doc.slug}}-{{example.name}}', []);
+						module = angular.module('stylemack-{{doc.slug}}-{{example.name}}', []);
 					}
 
-					module.controller('stylemark-{{doc.slug}}-{{example.name}}-' + index, function($scope) {
+					module.controller('stylemack-{{doc.slug}}-{{example.name}}-' + index, function($scope) {
 						$scope.$eval(block);
 					});
 				});
@@ -139,7 +139,7 @@
 				}
 
 				findAndHandleStylemarkBlocks('jsx', function(block, index) {
-					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var rootNode = document.querySelectorAll('.stylemack-react-root')[index];
 					var Component = eval(block);
 					ReactDOM.render(Component, rootNode);
 				});
@@ -197,7 +197,7 @@
 						};
 
 						compile(container, template, context).then(function(elem) {
-							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							var node = document.querySelectorAll('.stylemack-ember-root')[index];
 							jQuery(node).append(elem);
 						});
 					};
@@ -222,6 +222,6 @@
 			})(window.Ember);
 		</script>
 
-		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+		<script src="_stylemack/js/vendor/iframeResizer.contentWindow.min.js"></script>
 	</body>
 </html>

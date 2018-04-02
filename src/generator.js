@@ -67,10 +67,10 @@ class Generator {
 				.sortBy(['rank', 'key'])
 				.value();
 
-			// Copies stylemark assets
+			// Copies stylemack assets
 			fs.copy(
 				path.join(__dirname, 'assets'),
-				path.join(destination, '_stylemark'),
+				path.join(destination, '_stylemack'),
 				error => error ? console.log(error) : null
 			);
 

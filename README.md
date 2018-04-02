@@ -1,8 +1,10 @@
-Stylemark &nbsp; [![npm version](https://badge.fury.io/js/stylemark.svg)](https://badge.fury.io/js/stylemark) [![Build Status](https://travis-ci.org/nextbigsoundinc/stylemark.svg?branch=master)](https://travis-ci.org/nextbigsoundinc/stylemark)
+Stylemack &nbsp; [![npm version](https://badge.fury.io/js/stylemark.svg)](https://badge.fury.io/js/stylemark) [![Build Status](https://travis-ci.org/nextbigsoundinc/stylemark.svg?branch=master)](https://travis-ci.org/nextbigsoundinc/stylemark)
 ===
 **A living style guide generator for everything.** CSS, LESS, SASS, JS, React, Angular, Ember&mdash;you name it.
 
-Document your style guide components in code comments or Markdown files, and Stylemark will generate a static HTML site with live, interactive components.
+This is a fork of [Stylemack v0.6.5](https://github.com/nextbigsoundinc/stylemark)
+
+Document your style guide components in code comments or Markdown files, and Stylemack will generate a static HTML site with live, interactive components.
 
 ![Bootstrap style guide](https://user-images.githubusercontent.com/1235062/31162551-2d8f6da6-a8ac-11e7-8874-9e8a2c1c6680.png)
 
@@ -16,15 +18,15 @@ Installation
 ---
 Requires Node 6.x+ (4.x support coming soon)
 ```sh
-npm install -g stylemark
+npm install -g stylemack
 ```
 
-For a native app with built-in auto-updating/hot-reloading, see [Stylemark App](https://github.com/nextbigsoundinc/stylemark-app).
+For a native app with built-in auto-updating/hot-reloading, see [Stylemack App](https://github.com/nextbigsoundinc/stylemark-app).
 
 
 Documenting style guide components
 ---
-Documenting style guide components is as easy as writing Markdown. Components can be documented in dedicated Markdown files or as comment blocks within any source code. [**See the full Stylemark spec**](README-SPEC.md).
+Documenting style guide components is as easy as writing Markdown. Components can be documented in dedicated Markdown files or as comment blocks within any source code. [**See the full Stylemack spec**](README-SPEC.md).
 
 ### As a dedicated Markdown file
 ~~~markdown
@@ -125,12 +127,12 @@ stylemark -i path/to/source/code -o path/to/style/guide -c ~/acme-source-code/co
 
 **Example:** Build and open the style guide in a browser, and automatically rebuild and reload it when the source code is modified
 ```sh
-stylemark -i path/to/source/code -o path/to/style/guide -w -b
+stylemack -i path/to/source/code -o path/to/style/guide -w -b
 ```
 
 
 ### Configuration file
-The Stylemark configuration file is a [YAML](https://en.wikipedia.org/wiki/YAML) file that contains settings to use when generating the HTML style guide:
+The Stylemack configuration file is a [YAML](https://en.wikipedia.org/wiki/YAML) file that contains settings to use when generating the HTML style guide:
 ```yaml
 name: Name of the style guide
 logo: (optional) Relative filepath or absolute URL of your logo
