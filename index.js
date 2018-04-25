@@ -1,6 +1,6 @@
 'use strict';
 
 
-var stylemack = require('./stylemack');
+var stylemack = require('./src/stylemack');
 
 module.exports = stylemack;
