@@ -1,9 +1,9 @@
-var rfr = require('rfr');
+
 var fs = require('fs');
 var path = require('path');
 var yaml = require('js-yaml');
-var parser = rfr('src/parser');
-var generator = rfr('src/generator');
+var parser = require('./parser');
+var generator = require('./generator');
 var _ = require('lodash');
 
 var jsExtensions = require('common-js-file-extensions');
