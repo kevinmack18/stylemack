@@ -1,9 +1,9 @@
 'use strict';
 
-var rfr = require('rfr');
+
 var path = require('path');
 var expect = require('chai').expect;
-var parser = rfr('src/parser');
+var parser = require('./parser');
 var fs = require('fs');
 var _ = require('lodash');
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var rfr = require('rfr');
-var stylemack = rfr('src/stylemack');
+
+var stylemack = require('./stylemack');
 
 module.exports = stylemack;
